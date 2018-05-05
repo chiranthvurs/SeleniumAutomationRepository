@@ -1,0 +1,298 @@
+[
+  {
+    "uri": "features/Executeautomation.feature",
+    "id": "test-execute-automation",
+    "keyword": "Feature",
+    "name": "Test Execute Automation",
+    "description": "  In order test Execute Automation Demo site",
+    "line": 1,
+    "elements": [
+      {
+        "id": "test-execute-automation;login-to-execute-automation-and-fill-the-user-form:-chrome",
+        "keyword": "Scenario",
+        "name": "Login to execute automation and fill the user form: chrome",
+        "description": "",
+        "line": 4,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@Smoke",
+            "line": 3
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2791677
+            }
+          },
+          {
+            "output": [
+              "User has initiated local machine execution",
+              "Chrome browser launched successfully"
+            ],
+            "match": {
+              "location": "features/support/hooks.rb:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2448651396
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on execute automation home page",
+            "line": 5,
+            "match": {
+              "location": "features/step_definitions/ExecuteautomationSteps.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1395596594
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/support/hooks.rb:97"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 20973
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "When ",
+            "name": "I login in with username 'Admin' and password 'Admin'",
+            "line": 6,
+            "match": {
+              "location": "features/step_definitions/ExecuteautomationSteps.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 998237798
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/support/hooks.rb:97"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 16065
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "I fill the user form with Title '2' Initial 'Urs' FirstName 'Chiranth' MiddleName 'V'",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/ExecuteautomationSteps.rb:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 772044587
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/support/hooks.rb:97"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 33022
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "I fill the user form with gender 'Female' language 'Hindi' and save the form",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/ExecuteautomationSteps.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 449834378
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/support/hooks.rb:97"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 19635
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "I logout of the my account",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/ExecuteautomationSteps.rb:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 202579980
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/support/hooks.rb:97"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 51764
+                }
+              }
+            ]
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2571565949
+            }
+          }
+        ]
+      },
+      {
+        "id": "test-execute-automation;login-to-execute-automation-and-fill-the-user-form-and-handle-popup-window:-firefox",
+        "keyword": "Scenario",
+        "name": "Login to execute automation and fill the user form and handle popup window: firefox",
+        "description": "",
+        "line": 20,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@Smoke",
+            "line": 19
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4847950
+            }
+          },
+          {
+            "output": [
+              "User has initiated local machine execution",
+              "Firefox browser launched successfully"
+            ],
+            "match": {
+              "location": "features/support/hooks.rb:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5374540763
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on execute automation home page",
+            "line": 21,
+            "match": {
+              "location": "features/step_definitions/ExecuteautomationSteps.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1545639410
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/support/hooks.rb:97"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 16511
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "When ",
+            "name": "I login in with username 'Admin' and password 'Admin'",
+            "line": 22,
+            "match": {
+              "location": "features/step_definitions/ExecuteautomationSteps.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 834370023
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/support/hooks.rb:97"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 9817
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "I click on Generate I should be able to handle the javascript alert",
+            "line": 23,
+            "match": {
+              "location": "features/step_definitions/ExecuteautomationSteps.rb:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 200065865
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/support/hooks.rb:97"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 13387
+                }
+              }
+            ]
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1318068656
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

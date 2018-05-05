@@ -1,0 +1,3 @@
+Remote: false
+Remote_Machine1: http://9.120.231.159:5558/wd/hub
+Remote_Machine2: http://10.60.218.54:4444/wd/hub
