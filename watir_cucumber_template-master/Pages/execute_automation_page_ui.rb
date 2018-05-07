@@ -17,7 +17,7 @@ class ExecuteAutomationPageUI < Helper
   end
 
   def enterInitial()
-    return $expWait.getWhenClickable(:id => "Initial")
+    return $expWait.getWhenClickable(:id => "Initial")  
   end
 
   def enterFirstName()
