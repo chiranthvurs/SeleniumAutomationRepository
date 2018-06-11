@@ -11,4 +11,8 @@ gem 'saucelabs'
 gem 'dbi'
 gem 'ruby-odbc'
 gem 'geckodriver-helper'
+gem 'rubyXL'
+gem 'spreadsheet'
+gem 'require_all'
+gem 'nokogiri'
 

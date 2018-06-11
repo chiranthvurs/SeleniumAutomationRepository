@@ -1,8 +1,8 @@
 require 'selenium-webdriver'
 require 'rspec/expectations'
-require_relative '../../Utilities/selwait'
-require_relative '../../Utilities/helper'
-require_relative '../../Assertions/assert'
+require './Utilities/selwait'
+require './Utilities/helper'
+require './Assertions/assert'
 require 'yaml'
 
   Before do
@@ -11,7 +11,10 @@ require 'yaml'
     $getENV=YAML.load_file'../watir_cucumber_template-master/Config/environment.yml'
     $getURL=YAML.load_file'../watir_cucumber_template-master/Config/urlfactory.yml'
     $machine= $getENV['Remote_Machine1']
+  end
 
+  Before('@Smoke') do
+   puts "Smoke Test is executing"
   end
 #===================================== Configure Environment & Browser ================================================================
   Before do|scenario|
@@ -31,9 +34,11 @@ require 'yaml'
         puts "Firefox browser launched successfully"
 
       elsif (scenario.name).downcase.include? "internet explorer"
+        caps = Selenium::WebDriver::Remote::Capabilities.ie
+        caps['EnableNativeEvents'] = false
+        caps['ignoreZoomSetting'] = true
         $driver = Selenium::WebDriver::IE.driver_path="../watir_cucumber_template-master/Drivers/IEDriverServer.exe"
-        $driver = Selenium::WebDriver.for :ie
-        $driver.manage.window.maximize()
+        $driver = Selenium::WebDriver.for(:ie, desired_capabilities: caps)
         puts "IE browser launched successfully"
 
       else
@@ -97,7 +102,3 @@ require 'yaml'
 AfterStep do |scenario|
   # For something that has to be executed after each step
 end
-
-
-
-

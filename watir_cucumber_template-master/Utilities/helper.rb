@@ -1,5 +1,5 @@
 require 'selenium-webdriver'
-#===================================== Selenium Helpers ================================================================
+#===================================== Selenium Generic Helpers ================================================================
 class Helper < SeleniumWait
 
   def launchURL (applicationName)

@@ -5,25 +5,25 @@ Feature: Test Execute Automation
     Given I am on execute automation home page
     When I login in with username 'Admin' and password 'Admin'
     And I fill the user form with Title '2' Initial 'Urs' FirstName 'Chiranth' MiddleName 'V'
-    And I fill the user form with gender 'Female' language 'Hindi' and save the form
+    And I fill the user form with gender 'female' language 'Hindi' and save the form
     Then I logout of the my account
 
-  @Regression
+  @Smoke @Regression
   Scenario: Login to execute automation and fill the user form and handle popup window: chrome
     Given I am on execute automation home page
     When I login in with username 'Admin' and password 'Admin'
     And I fill the user form with Title '2' Initial 'Urs' FirstName 'Chiranth' MiddleName 'V'
-    And I fill the user form with gender 'Female' language 'Hindi' and save the form
-    Then I click on HTML Pop up link enter details Title '2' Initial 'Urs' FirstName 'Chiranth' MiddleName 'V' and close the pop up
+    And I fill the user form with gender 'female' language 'Hindi' and save the form
+    Then I click on HTML Pop up link enter details Title '2' Initial 'Urs' FirstName 'Chiranth' MiddleName 'V' Gender 'female' Language 'Hindi' and close the pop up
 
-  @Smoke
+  @Sanity
   Scenario: Login to execute automation and fill the user form and handle popup window: firefox
     Given I am on execute automation home page
     When I login in with username 'Admin' and password 'Admin'
     And I click on Generate I should be able to handle the javascript alert
 
-  @Multipledata
-  Scenario: Login to execute automation and fill the user form: chrome
+  @Regression
+  Scenario: Login to execute automation and fill the user form for multiple users: chrome
     Given I am on execute automation home page
     When I login in with username 'Admin' and password 'Admin'
     And I fill the form for multiple users as below:
@@ -31,5 +31,15 @@ Feature: Test Execute Automation
       | 1    |v     |Vinuth   |  Vikram|
       | 2    |B     |Bharath  |  Dutt  |
       | 1    |R     |Vikram   |  Bhat  |
-    And I fill the user form with gender 'Female' language 'Hindi' and save the form
+    And I fill the user form with gender 'female' language 'Hindi' and save the form
     Then I logout of the my account
+
+  @Sanity
+  Scenario Outline: Login with multiple users: chrome
+    Given I am on execute automation home page
+    When I login with multiple users "<data_set>" dataset
+    Examples:
+    |data_set|
+    |DataSet1|
+    |DataSet2|
+    |DataSet3|

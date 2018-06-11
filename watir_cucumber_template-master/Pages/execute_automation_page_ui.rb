@@ -17,7 +17,7 @@ class ExecuteAutomationPageUI < Helper
   end
 
   def enterInitial()
-    return $expWait.getWhenClickable(:id => "Initial")  
+    return $expWait.getWhenClickable(:id => "Initial")
   end
 
   def enterFirstName()
@@ -28,12 +28,12 @@ class ExecuteAutomationPageUI < Helper
     return $expWait.getWhenClickable(:id => "MiddleName")
   end
 
-  def selectGenderAsFemale()
-    return $expWait.getWhenClickable(:xpath => "//input[@value='female']")
+  def selectGender(gender)
+    return $expWait.getWhenClickable(:xpath => "//input[@value='"+gender+"']")
   end
 
-  def selectLanguageAsHindi()
-    return $expWait.getWhenClickable(:xpath => "//input[@name='Hindi']")
+  def selectLanguage(language)
+    return $expWait.getWhenClickable(:xpath => "//input[@name='"+language+"']")
   end
 
   def clickSave()
@@ -45,7 +45,7 @@ class ExecuteAutomationPageUI < Helper
   end
 
   def clickOnHTMLPopup
-    return $expWait.getWhenClickable(:link  => "HtmlPopup")
+    return $expWait.getWhenClickable(:xpath  => "//a[@href='popup.html']")
   end
 
   def clickOnGenerate
